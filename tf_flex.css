@@ -21,16 +21,15 @@
    ================
 */
 body {
-    display: -webkit-flex;
+    display: -webkit-flex; 
     display: flex; 
-    
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap; 
 }
 
 header, footer {
     width: 100%;
-}
+} 
 
 aside {
     -webkit-flex:1 1 20px;
@@ -60,9 +59,14 @@ section#topics article {
 */
 
 @media only screen and (max-width: 480px) {
-  
-
- 
+    aside {
+        -webkit-order: 99;
+        order: 99;
+    }
+    footer {
+        -webkit-order: 100;
+        order: 100;
+    }
 }
 
 /* ============================================
@@ -71,9 +75,16 @@ section#topics article {
 */
 
 @media only screen and (min-width: 481px) {
-
-
-
+    nav.horizontal ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row wrap;
+    }
+    nav.horizontal li {
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto; 
+    }
 }
 
 
